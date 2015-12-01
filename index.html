@@ -651,44 +651,30 @@
                     </div>
                 </div>
                 <div class="spacer-75"></div>
+
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <!-- Contact FORM -->
-                        <form class="contact-form" id="contact" role="form">
-
-                            <!-- IF MAIL SENT SUCCESSFULLY -->
-                            <h6 class="successContent">
-                                <i class="fa fa-check left" style="color: #5cb45d;"></i>Your message has been sent successfully.
-                            </h6>
-                            <!-- END IF MAIL SENT SUCCESSFULLY -->
-
-                            <!-- MAIL SENDING UNSUCCESSFULL -->
-                            <h6 class="errorContent">
-                                <i class="fa fa-exclamation-circle left" style="color: #e1534f;"></i>There was a problem validating the form please check!
-                            </h6>
-                            <!-- END MAIL SENDING UNSUCCESSFULL -->
-
+                        <form class="contact-form" role="form" method="POST" action="//formspree.io/craigmclarke@gmail.com">
                             <div class="form-field-wrapper">
-                                <input class="input-sm form-full" id="form-name" type="text" name="form-name" placeholder="Your Name" required>
+                                <input class="input-sm form-full" type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-field-wrapper">
+                                <input class="input-sm form-full"  type="email" name="_replyto" placeholder="Email" required>
+                            </div>
+                            <div class="form-field-wrapper">
+                                <textarea class="form-full"  rows="7" name="message" placeholder="Your Message" required></textarea>
                             </div>
 
-                            <div class="form-field-wrapper">
-                                <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="Email" required>
-                            </div>
+                            <button class="btn btn-md btn-black form-full" type="submit" value="Send">Send Message</button>
 
-                            <div class="form-field-wrapper">
-                                <input class="input-sm form-full" id="form-subject" type="text" name="form-subject" placeholder="Subject">
-                            </div>
-
-                            <div class="form-field-wrapper">
-                                <textarea class="form-full" id="form-message" rows="7" name="form-message" placeholder="Your Message" required></textarea>
-                            </div>
-
-                            <button class="btn btn-md btn-black form-full" type="submit" id="form-submit" name="submit">Send Message</button>
+                            <input type="hidden" name="_next" value="thanks.html" />
+                            <input type="hidden" name="_subject" value="Waveform Portfolio Contact" />
                         </form>
                         <!-- END Contact FORM -->
                     </div>
                 </div>
+
             </div>
         </section>
         <!-- Contact Section -->
@@ -711,11 +697,11 @@
 
                     <div class="col-md-4">
                         <div class="contact-box-left">
-                            <!-- <div class="contact-icon-left"><i class="ion ion-ios-telephone"></i></div>
+                            <div class="contact-icon-left"><i class="ion ion-ios-telephone"></i></div>
                             <h6>Call</h6>
                             <p>
                                 <span></span><br />
-                            </p> -->
+                            </p>
                         </div>
                     </div>
 
