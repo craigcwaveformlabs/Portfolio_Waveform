@@ -105,14 +105,14 @@ gulp.task('watchFiles', function(){
 // Copy to dist folder - only copies.
 gulp.task("distribute", function() {
   return gulp.src(['css/styles-min.css', 'js/app-min.js', '*.html',
-                  'img/**', 'fonts/**'], {base: './'})
+                  'img/**', 'fonts/**', 'media/**'], {base: './'})
             .pipe(gulp.dest('dist'));
 });
 
 // Build
 gulp.task("build", ["minifyCSS", "minifyJS"], function() {
   return gulp.src(['css/styles-min.css', 'js/app-min.js', '*.html',
-                  'img/**', 'fonts/**'], {base: './'})
+                  'img/**', 'fonts/**', 'media/**'], {base: './'})
             .pipe(gulp.dest('dist'));
 });
 
