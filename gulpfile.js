@@ -45,6 +45,7 @@ gulp.task("concatScripts", function() {
     "js/plugin/jquery.validate.min.js",
     "js/theme.js",
     "js/navigation.js",
+    "js/formspree.js",
     "js/plugin/jquery.mb.YTPlayer.min.js",
     "js/plugin/jquery.singlePageNav.js",
     "js/contact-form.js",

@@ -643,7 +643,7 @@
         <hr />
 
         <!-- Contact Section -->
-        <section id="contact-section" class="ptb ptb-sm-80">
+        <section id="contact-section" class="ptb ptb-sm-80 contact-form open">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center">
@@ -654,31 +654,30 @@
 
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <!-- Contact FORM -->
-                        <form class="contact-form" role="form" method="POST" action="//formspree.io/craigmclarke@gmail.com">
-                            <div class="form-field-wrapper">
-                                <input class="input-sm form-full" type="text" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-field-wrapper">
-                                <input class="input-sm form-full"  type="email" name="_replyto" placeholder="Email" required>
-                            </div>
-                            <div class="form-field-wrapper">
-                                <textarea class="form-full"  rows="7" name="message" placeholder="Your Message" required></textarea>
-                            </div>
-
-                            <button class="btn btn-md btn-black form-full" type="submit" value="Send">Send Message</button>
-
-                            <!-- <input type="hidden" name="_next" value="" /> -->
-                            <input type="hidden" name="_subject" value="Waveform Portfolio Contact" />
-                            <input type="text" name="_gotcha" style="display:none" />
+                      <section class="contact-form open">
+                        <form autocomplete="off">
+                          <div class="form-field-wrapper">
+                            <input class="input-sm form-full" name="name" type="text" placeholder="Your name">
+                          </div>
+                          <div class="form-field-wrapper">
+                            <input class="input-sm form-full" name="email" type="email" placeholder="Your email">
+                          </div>
+                          <div class="form-field-wrapper">
+                            <textarea class="input-m form-full" name="message" type="text" placeholder="Message"></textarea>
+                          </div>
+                          <input type="text" name="_gotcha" style="display:none">
+                          <input type="hidden" name="_subject" value="Waveform Portfolio Contact"
                         </form>
-                        <!-- END Contact FORM -->
+                        <div class="actions">
+                          <button class="btn btn-md btn-black form-full" type="submit">Send Message</button>
+                        </div>
+                      </section>
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- Contact Section -->
+
 
         <hr />
 
@@ -759,6 +758,7 @@
     <!-- JS -->
     <!-- single gulp'd file -->
     <script src="js/app-min.js" type="text/javascript"></script>
+    <script src="js/formspree.js" type="text/javascript"></script>
 
     <!-- <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
     <script src="js/plugin/jquery.easing.js" type="text/javascript"></script>
