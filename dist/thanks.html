@@ -1,0 +1,59 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>Waveform - Thanks</title><meta name=description content><meta name=keywords content><meta name=author content=craigmclarke><meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><link rel="shortcut icon" type=image/x-icon href=img/favicon.ico><link rel=icon type=image/png href=img/favicon.png><link rel=apple-touch-icon href=img/favicon.png><link href=css/styles-min.css rel=stylesheet type=text/css><style type=text/css>
+
+        /* NOTE : This is Css To Only CommingSoon Page */
+        body {
+            color: white;
+            background: #323232;
+        }
+
+        .header-bar {
+            position: absolute;
+            width: 100%;
+            padding: 30px 0;
+            z-index: 2;
+        }
+
+            .header-bar a {
+                color: #fff;
+            }
+
+        .logo span {
+            display: inline-block;
+        }
+
+        @media (max-width: 767px) {
+
+            .text-center-xs {
+                text-align: center;
+            }
+        }
+    </style></head><body class="full-intro background--dark"><div class=wrapper><header class=header><div class=container><div class=logo><a href=index.html><img class=l-black src=img/logo-black.png> <img class=l-white src=img/logo-white.png> <img class=l-color src=img/logo-color.png></a></div></div></header><section class="full-screen-intro bg-img14"><div class="full-cap-wraper overlay-dark light-color"><div class="content-caption light-color"><div class=container><h1 class>Thanks For Getting In Touch!</h1><p class=lead>We'll get back to you as soon as we figure out how.</p><br></div></div></div></section></div><script src=js/jquery-1.11.2.min.js type=text/javascript></script><script src=js/plugin/jquery.downCount.js type=text/javascript></script><script type=text/javascript>
+        $('.countdown').downCount({
+            date: '06/29/2016 12:00:00',
+            offset: +10
+        }, function () {
+            alert('WOOT WOOT, done!');
+        });
+    </script><script type=text/javascript>
+
+        $(document).ready(function () {
+            headerResize();
+        });
+
+        $(window).resize(function () {
+            headerResize();
+        })
+
+        function headerResize() {
+            var winWidthMd = $(window).height();
+            if ($(window).width() > 767) {
+                // alert('deskstop');
+                $('.full-screen-intro').css({ "height": winWidthMd, "padding": "0px 0px" });
+            }
+            else {
+                $('.full-screen-intro').css({ "height": "600px", "padding": "400px 0px" });
+            };
+
+        };
+
+    </script></body></html>

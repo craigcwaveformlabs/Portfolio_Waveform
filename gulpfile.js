@@ -11,7 +11,9 @@ var gulp = require('gulp'),
     maps = require('gulp-sourcemaps'),
      del = require('del'),
  connect = require('gulp-connect'),
-  prefix = require('gulp-autoprefixer');;
+  prefix = require('gulp-autoprefixer'),
+ minHTML = require('gulp-minify-html'),
+ changed = require('gulp-changed');
 
 
 // clean
@@ -95,6 +97,22 @@ gulp.task('minifyCSS', ["concatCss"], function() {
       .pipe(gulp.dest('css'))
 });
 
+
+// HTML - Minify
+
+gulp.task('minifyHTML', function() {
+   var htmlSrc = './*.html',
+   htmlDst = './dist/';
+   var opts = {empty: true};
+
+   gulp.src(htmlSrc)
+      .pipe(changed(htmlDst))
+      .pipe(minHTML(opts))
+      .pipe(gulp.dest(htmlDst));
+});
+
+
+
 // Watch
 gulp.task('watchFiles', function(){
   gulp.watch(['css/**/*.css'], ['minifyCSS']);
@@ -102,16 +120,22 @@ gulp.task('watchFiles', function(){
 });
 
 
-// Copy to dist folder - only copies.
+// Copy to dist folder - only copies. doesnt run html min! run that first
 gulp.task("distribute", function() {
-  return gulp.src(['css/styles-min.css', 'js/app-min.js', '*.html',
+  return gulp.src(['css/styles-min.css', 'js/app-min.js',
                   'img/**', 'fonts/**', 'media/**'], {base: './'})
             .pipe(gulp.dest('dist'));
 });
 
+// Copy minifed versions to dist folder. will run minHTML but not the others for now.
+gulp.task("copyMin", ["minifyHTML"], function() {
+  return gulp.src(['css/styles-min.css', 'js/app-min.js'], {base: './'})
+            .pipe(gulp.dest('dist'));
+});
+
 // Build
-gulp.task("build", ["minifyCSS", "minifyJS"], function() {
-  return gulp.src(['css/styles-min.css', 'js/app-min.js', '*.html',
+gulp.task("build", ["minifyCSS", "minifyJS", "minifyHTML"], function() {
+  return gulp.src(['css/styles-min.css', 'js/app-min.js',
                   'img/**', 'fonts/**', 'media/**'], {base: './'})
             .pipe(gulp.dest('dist'));
 });
