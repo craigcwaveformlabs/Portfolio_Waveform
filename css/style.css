@@ -2272,11 +2272,19 @@ height:100%;
     background-size: cover !important;
 }
 
-.bg-img1, .bg-img2, .bg-img3, .bg-img4, .bg-img5, .bg-img6, .bg-img7, .bg-img8, .bg-img9, .bg-img10, .bg-img11, .bg-img12, .bg-img13, .bg-img14, .bg-img15, .bg-img16, .bg-img17, .bg-img18, .bg-img19, .bg-img20, .bg-img21, .bg-img22, .bg-img23, .bg-img24, .bg-img25, .bg-img26, .bg-img27, .bg-img28, .bg-img29, .bg-img30, .bg-port-BigCheer, .bg-port-BigCheerLogo, .bg-port-BigCheerFTUE, .bg-port-YarneeProduct, .bg-port-BigCheerFTUE, .bg-port-YarneeWebView, bg-port-MSAlbum, bg-port-MSPoster, bg-port-Github, bg-port-ScapaFeatures, bg-Thanks {
+.bg-img1, .bg-img2, .bg-img3, .bg-img4, .bg-img5, .bg-img6, .bg-img7, .bg-img8, .bg-img9, .bg-img10, .bg-img11, .bg-img12, .bg-img13, .bg-img14, .bg-img15, .bg-img16, .bg-img17, .bg-img18, .bg-img19, .bg-img20, .bg-img21, .bg-img22, .bg-img23, .bg-img24, .bg-img25, .bg-img26, .bg-img27, .bg-img28, .bg-img29, .bg-img30, .bg-port-BigCheer, .bg-port-BigCheerLogo, .bg-port-BigCheerFTUE, .bg-port-YarneeProduct, .bg-port-BigCheerFTUE, .bg-port-YarneeWebView, .bg-port-MSAlbum, .bg-port-MSPoster, .bg-port-Github, .bg-port-ScapaFeatures, .bg-Thanks , .bg-index, .bg-portfolio {
     background-size: cover !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.bg-index {
+  background-image: url("../img/bg/bg_index.jpg");
+}
+
+.bg-portfolio {
+  background-image: url("../img/bg/bg_portfolio.jpg");
 }
 
 .bg-port-BigCheer {
@@ -2284,39 +2292,39 @@ height:100%;
 }
 
 .bg-port-BigCheerLogo {
-    background-image: url("../img/work/05_BigCheerLogo/3-min.png");
+    background-image: url("../img/work/05_BigCheerLogo/bg.png");
 }
 
 .bg-port-BigCheerFTUE {
-    background-image: url("../img/work/06_BigCheerFTUE/bg.png");
+    background-image: url("../img/work/06_BigCheerFTUE/bg.jpg");
 }
 
 .bg-port-YarneeProduct {
-    background-image: url("../img/work/07_YarneeProduct/bg_3.png");
+    background-image: url("../img/work/07_YarneeProduct/bg.jpg");
 }
 
 .bg-port-YarneeFTUE {
-    background-image: url("../img/work/10_YarneeFTUE/bg.png");
+    background-image: url("../img/work/10_YarneeFTUE/bg.jpg");
 }
 
 .bg-port-YarneeWebView {
-    background-image: url("../img/work/08_YarneeWebView/21.png");
+    background-image: url("../img/work/08_YarneeWebView/bg.jpg");
 }
 
 .bg-port-MSAlbum {
-    background-image: url("../img/work/12_MSAlbumCover/bg.png");
+    background-image: url("../img/work/12_MSAlbumCover/bg.jpg");
 }
 
 .bg-port-MSPoster {
-    background-image: url("../img/work/13_MSGigPoster/2.png");
+    background-image: url("../img/work/13_MSGigPoster/bg.jpg");
 }
 
 .bg-port-Github {
-    background-image: url("../img/work/14_Github/bg.png");
+    background-image: url("../img/work/14_Github/bg.jpg");
 }
 
 .bg-port-ScapaFeatures {
-    background-image: url("../img/work/15_Scapa/bg_2.png");
+    background-image: url("../img/bg/bg_scapa.jpg");
 }
 
 .bg-Thanks {
