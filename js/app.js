@@ -3434,7 +3434,7 @@ $(document).ready(function () {
     $(".text-rotate").textrotator({
         animation: "dissolve",
         separator: ",",
-        speed: 2000
+        speed: 3000
     });
 });
 
