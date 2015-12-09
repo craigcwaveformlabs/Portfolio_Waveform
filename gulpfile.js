@@ -107,7 +107,7 @@ gulp.task('minifyHTML', function() {
    var opts = {empty: true};
 
    gulp.src(htmlSrc)
-      .pipe(changed(htmlDst))
+      // .pipe(changed(htmlDst))
       .pipe(minHTML(opts))
       .pipe(gulp.dest(htmlDst));
 });
