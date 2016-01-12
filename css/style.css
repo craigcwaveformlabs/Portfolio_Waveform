@@ -199,6 +199,10 @@ p {
         color: #e6ae49 !important;
     }
 
+    p.small {
+      font-size: 12px;
+    }
+
 .gray {
     color: #888;
 }
@@ -1698,10 +1702,11 @@ header.sticky .navigation a.current-ele {
 
     .accordion-title:before {
         content: "\f105";
-        display: block;
+        display: inline;
         font-family: "FontAwesome",sans-serif;
-        position: absolute;
-        right: 18px;
+        /*position: relative;*/
+        /*right: 18px;*/
+        padding-right: 18px;
         font-weight: 400;
     }
 
@@ -3335,7 +3340,7 @@ ul.project-detail-block, .project-detail-block ul {
 
 .shop-item-info {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
 }
 
     .shop-item-info a:hover, .shop-item-info a:hover h5, .shop-item-info a:hover h6, .shop-item-name:hover {

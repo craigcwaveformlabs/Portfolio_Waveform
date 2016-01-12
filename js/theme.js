@@ -7,18 +7,18 @@
 
     $(window).load(function () {
         // ----------------------------------------------------------------------------------------------------------------------->
-        // SITE LOADER                     ||----------- 
+        // SITE LOADER                     ||-----------
         // ----------------------------------------------------------------------------------------------------------------------->
         $('#loader').fadeOut();
-        $('#preloader').delay(350).fadeOut('slow');
-        $('body').delay(350).css({ 'overflow': 'visible' });
+        $('#preloader').delay(100).fadeOut('slow');
+        $('body').delay(100).css({ 'overflow': 'visible' });
 
 
     })
 
 
     // ---------------------------------------------------------------------------------------------------------------------------->
-    // GENERAL SCRIPTS FOR ALL PAGES    ||----------- 
+    // GENERAL SCRIPTS FOR ALL PAGES    ||-----------
     // ---------------------------------------------------------------------------------------------------------------------------->
 
     $(document).ready(function () {
@@ -216,7 +216,7 @@ function sliderAll() {
         navigation: true,  // Show next and prev buttons
         pagination: true,  // Show pagination buttons
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        
+
     });
 
     // Image Slider
@@ -476,7 +476,7 @@ function containerGridMasonry() {
                 },
             });
         });
-        
+
         // bind filter button click
         $('.container-filter').on('click', '.categories', function () {
             var filterValue = $(this).attr('data-filter');
