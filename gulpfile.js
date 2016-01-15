@@ -133,17 +133,13 @@ gulp.task('uncss', function() {
       // 'css_FULL/plugin/owl.carousel.css',
       // 'css_FULL/plugin/smoothproducts.css',
       // 'css_FULL/plugin/YTPlayer.css',
-      'css_FULL/bootstrap.css',
+      // 'css_FULL/bootstrap.css',
       'css_FULL/style.css'
 
     ])
     .pipe(uncss({
       html: [
-        'http://localhost:8000/index.html',
-        'http://localhost:8000/portfolio.html',
-        'http://localhost:8000/portfolio-ScapaFeatures.html',
-        'http://localhost:8000/portfolio-Github.html',
-        'http://localhost:8000/portfolio-BigCheerApp.html'
+        'http://localhost:8000/*.html'
       ]
     }))
     .pipe(gulp.dest('uncss/'));
