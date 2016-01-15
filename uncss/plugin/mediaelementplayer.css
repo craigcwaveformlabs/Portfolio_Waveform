@@ -1,0 +1,141 @@
+.mejs-offscreen {
+  /* Accessibility: hide screen reader texts (and prefer "top" for RTL languages). */
+  position: absolute !important;
+  top: -10000px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.mejs-container {
+  position: relative;
+  background: #000;
+  font-family: Helvetica, Arial;
+  text-align: left;
+  vertical-align: top;
+  text-indent: 0;
+}
+
+.mejs-clear {
+  clear: both;
+}
+
+/* Start: LAYERS */
+
+.mejs-mediaelement {
+  position: relative;
+  /*top: 0;
+	left: 0;*/
+  width: 100%;
+}
+
+/* End: LAYERS */
+
+/* Start: CONTROL BAR */
+
+.mejs-container .mejs-controls {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  background: #f00;
+  background: #252525;
+  height: 30px;
+  width: 100%;
+}
+
+/* :focus for accessibility */
+
+/* End: CONTROL BAR */
+
+/* Start: Time (Current / Duration) */
+
+/* End: Time (Current / Duration) */
+
+/* Start: Play/Pause/Stop */
+
+/* Start: Play/Pause/Stop */
+
+/* Start: Progress Bar */
+
+/*
+.mejs-controls .mejs-time-rail:hover .mejs-time-handle {
+	visibility:visible;
+}
+*/
+
+/* End: Progress Bar */
+
+/* Start: Fullscreen */
+
+/* End: Fullscreen */
+
+/* Start: Mute/Volume */
+
+/*
+.mejs-controls .mejs-volume-button:hover .mejs-volume-slider {
+	display: block;
+}
+*/
+
+/* horizontal version */
+
+/* End: Mute/Volume */
+
+/* Start: Track (Captions and Chapters) */
+
+/*
+.mejs-controls .mejs-captions-button:hover  .mejs-captions-selector {
+	visibility: visible;
+}
+*/
+
+/* End: Track (Captions and Chapters) */
+
+/* Start: Error */
+
+
+
+.me-cannotplay a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.me-cannotplay span {
+  padding: 15px;
+  display: block;
+}
+
+/* End: Error */
+
+/* Start: Loop */
+
+/* End: Loop */
+
+/* Start: backlight */
+
+/* End: backlight */
+
+/* Start: Picture Controls */
+
+/* End: Picture Controls */
+
+/* context menu */
+
+/* Start: Source Chooser */
+
+/* End: Source Chooser */
+
+/* Start: Postroll */
+
+/* End: Postroll */
+
+/* Start: Speed */
+
+/* End: Speed */
+
+/* Start: Skip Back */
+
+/* End: Skip Back */

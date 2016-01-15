@@ -13,7 +13,8 @@ var gulp = require('gulp'),
  connect = require('gulp-connect'),
   prefix = require('gulp-autoprefixer'),
  minHTML = require('gulp-minify-html'),
- changed = require('gulp-changed');
+ changed = require('gulp-changed'),
+ uncss = require('gulp-uncss');
 
 
 // clean
@@ -24,10 +25,10 @@ gulp.task('clean', function() {
 // JS - Concat
 gulp.task("concatScripts", function() {
   return gulp.src([
-    "js/jquery-1.11.2.min.js",
+    // "js/jquery-1.11.2.min.js",
     "js/plugin/jquery.easing.js",
-    "js/jquery-ui.min.js",
-    "js/bootstrap.min.js",
+    // "js/jquery-ui.min.js",
+    // "js/bootstrap.min.js",
     "js/plugin/jquery.flexslider.js",
     "js/plugin/background-check.min.js",
     "js/plugin/jquery.fitvids.js",
@@ -49,8 +50,8 @@ gulp.task("concatScripts", function() {
     "js/plugin/jquery.mb.YTPlayer.min.js",
     "js/plugin/jquery.singlePageNav.js",
     "js/contact-form.js",
-    "js/plugin/mapGoogle.js",
-    "js/map.js",
+    // "js/plugin/mapGoogle.js",
+    // "js/map.js",
     "js/plugin/TweenLite.min.js",
     "js/plugin/EasePack.min.js",
     "js/plugin/pollyfill.js",
@@ -82,6 +83,7 @@ gulp.task("concatCss", function(){
     "css/plugin/animate.css",
     "css/jquery-ui.css",
     "css/plugin/YTPlayer.css",
+    "css/plugin/mediaelementplayer.css",
     "css/custom.css"
     ])
   .pipe(maps.init())
@@ -111,6 +113,42 @@ gulp.task('minifyHTML', function() {
       .pipe(minHTML(opts))
       .pipe(gulp.dest(htmlDst));
 });
+
+// Uncss - remove unused css.
+
+gulp.task('uncss', function() {
+  return gulp.src([
+      // 'css_FULL/custom.css',
+      // 'css_FULL/font-awesome.css',
+      // 'css_FULL/ionicons.css',
+      // 'css_FULL/jquery-ui.css',
+      // 'css_FULL/navigation.css',
+      // 'css_FULL/plugin/animate.css',
+      // 'css_FULL/plugin/colorbox.css',
+      // 'css_FULL/plugin/flexslider.css',
+      // 'css_FULL/plugin/jPushMenu.css',
+      // 'css_FULL/plugin/jquery.fs.tipper.css',
+      // 'css_FULL/plugin/jquery.fullPage.css',
+      // 'css_FULL/plugin/mediaelementplayer.css'
+      // 'css_FULL/plugin/owl.carousel.css',
+      // 'css_FULL/plugin/smoothproducts.css',
+      // 'css_FULL/plugin/YTPlayer.css',
+      'css_FULL/bootstrap.css',
+      'css_FULL/style.css'
+
+    ])
+    .pipe(uncss({
+      html: [
+        'http://localhost:8000/index.html',
+        'http://localhost:8000/portfolio.html',
+        'http://localhost:8000/portfolio-ScapaFeatures.html',
+        'http://localhost:8000/portfolio-Github.html',
+        'http://localhost:8000/portfolio-BigCheerApp.html'
+      ]
+    }))
+    .pipe(gulp.dest('uncss/'));
+});
+
 
 
 
